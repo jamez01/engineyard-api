@@ -42,15 +42,15 @@ module EngineyardAPI
       @instance['availability_zone']
     end
     
-    # Returns list of log entries
+    # Returns list of log entries as array
     def logs
       return @logs['logs']
     end
-    def [](key)
+    def [](key) # :nodoc:
       @instance['key']
     end
     
-    
+    # Returns list of alerts as array
     def alerts
       return @alerts['alerts']
     end
