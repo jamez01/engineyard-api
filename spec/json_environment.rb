@@ -3,13 +3,13 @@ ENVIRONMENT_JSON=%q{
 	"environments": [
 		{
 			"id": 38093,
-			"name": "CalTest",
+			"name": "Environment",
 			"ssh_username": "deploy",
 			"app_server_stack_name": "nginx_unicorn",
 			"framework_env": "production",
 			"instance_status": "running",
 			"instances_count": 2,
-			"load_balancer_ip_address": "50.19.255.142",
+			"load_balancer_ip_address": "127.1.0.142",
 			"account": {
 				"id": 7952,
 				"name": "James-test"
@@ -32,7 +32,7 @@ ENVIRONMENT_JSON=%q{
 					"role": "app_master",
 					"name": null,
 					"amazon_id": "i-ae69dbc5",
-					"public_hostname": "ec2-50-19-255-142.compute-1.amazonaws.com",
+					"public_hostname": "ec2-127-1-0-142.compute-1.amazonaws.com",
 					"bridge": true,
 					"availability_zone": "us-east-1b"
 				}
@@ -43,15 +43,15 @@ ENVIRONMENT_JSON=%q{
 				"role": "app_master",
 				"name": null,
 				"amazon_id": "i-ae69dbc5",
-				"public_hostname": "ec2-50-19-255-142.compute-1.amazonaws.com",
+				"public_hostname": "ec2-127-1-0-142.compute-1.amazonaws.com",
 				"bridge": true,
 				"availability_zone": "us-east-1b"
 			},
 			"apps": [
 				{
 					"id": 24733,
-					"name": "weekendsignupcalendar",
-					"repository_uri": "git@github.com:engineyard/Weekend-Signup-Calendar.git",
+					"name": "Application",
+					"repository_uri": "git@github.com:example/Application.git",
 					"app_type_id": "merb",
 					"account": {
 						"id": 7952,
@@ -60,16 +60,16 @@ ENVIRONMENT_JSON=%q{
 				}
 			],
 			"deployment_configurations": {
-				"weekendsignupcalendar": {
+				"Application": {
 					"id": 46381,
 					"domain_name": "_",
-					"uri": "http://ec2-50-19-255-142.compute-1.amazonaws.com",
+					"uri": "http://ec2-127-1-0-142.compute-1.amazonaws.com",
 					"migrate": {
 						"perform": false,
 						"command": null
 					},
-					"name": "weekendsignupcalendar",
-					"repository_uri": "git@github.com:engineyard/Weekend-Signup-Calendar.git"
+					"name": "Application",
+					"repository_uri": "git@github.com:example/Application.git"
 				}
 			}
 		},
@@ -92,8 +92,8 @@ ENVIRONMENT_JSON=%q{
 			"apps": [
 				{
 					"id": 24733,
-					"name": "weekendsignupcalendar",
-					"repository_uri": "git@github.com:engineyard/Weekend-Signup-Calendar.git",
+					"name": "Application",
+					"repository_uri": "git@github.com:example/Application.git",
 					"app_type_id": "merb",
 					"account": {
 						"id": 7952,
@@ -102,7 +102,7 @@ ENVIRONMENT_JSON=%q{
 				}
 			],
 			"deployment_configurations": {
-				"weekendsignupcalendar": {
+				"Application": {
 					"id": 64389,
 					"domain_name": "_",
 					"uri": null,
@@ -110,8 +110,8 @@ ENVIRONMENT_JSON=%q{
 						"perform": true,
 						"command": "rake db:migrate"
 					},
-					"name": "weekendsignupcalendar",
-					"repository_uri": "git@github.com:engineyard/Weekend-Signup-Calendar.git"
+					"name": "Application",
+					"repository_uri": "git@github.com:example/Application.git"
 				}
 			}
 		}

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: EngineyardAPI::App</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/engineyard-api/app_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/engineyard-api/app.rb">lib/engineyard-api/app.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="../Object.html">Object</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-i-account_id">#account_id</a></li>
+          
+          <li><a href="#method-i-account_name">#account_name</a></li>
+          
+          <li><a href="#method-i-app_id">#app_id</a></li>
+          
+          <li><a href="#method-i-app_type">#app_type</a></li>
+          
+          <li><a href="#method-i-name">#name</a></li>
+          
+          <li><a href="#method-i-repository">#repository</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../EngineyardAPI.html">EngineyardAPI</a></li>
+        
+          <li><a href="../EngineyardAPI/Account.html">EngineyardAPI::Account</a></li>
+        
+          <li><a href="../EngineyardAPI/App.html">EngineyardAPI::App</a></li>
+        
+          <li><a href="../EngineyardAPI/Engineyard.html">EngineyardAPI::Engineyard</a></li>
+        
+          <li><a href="../EngineyardAPI/Environment.html">EngineyardAPI::Environment</a></li>
+        
+          <li><a href="../EngineyardAPI/Instance.html">EngineyardAPI::Instance</a></li>
+        
+          <li><a href="../Object.html">Object</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">EngineyardAPI::App</h1>
+
+    <div id="description" class="description">
+      
+<p>Class to store application information</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="account_id-method" class="method-detail ">
+          <a name="method-i-account_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">account_id</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return account id as integer</p>
+            
+
+            
+            <div class="method-source-code" id="account_id-source">
+<pre>
+<span class="ruby-comment"># File lib/engineyard-api/app.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">account_id</span> 
+  <span class="ruby-ivar">@app</span>[<span class="ruby-string">'account'</span>][<span class="ruby-string">'id'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- account_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- account_id-method -->
+
+      
+        <div id="account_name-method" class="method-detail ">
+          <a name="method-i-account_name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">account_name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return account nam eas string</p>
+            
+
+            
+            <div class="method-source-code" id="account_name-source">
+<pre>
+<span class="ruby-comment"># File lib/engineyard-api/app.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">account_name</span> 
+  <span class="ruby-ivar">@app</span>[<span class="ruby-string">'account'</span>][<span class="ruby-string">'name'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- account_name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- account_name-method -->
+
+      
+        <div id="app_id-method" class="method-detail ">
+          <a name="method-i-app_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">app_id</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns application id in form of an integer</p>
+            
+
+            
+            <div class="method-source-code" id="app_id-source">
+<pre>
+<span class="ruby-comment"># File lib/engineyard-api/app.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">app_id</span>
+  <span class="ruby-ivar">@app</span>[<span class="ruby-string">'id'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- app_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- app_id-method -->
+
+      
+        <div id="app_type-method" class="method-detail ">
+          <a name="method-i-app_type"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">app_type</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Returns type of application</p>
+            
+
+            
+            <div class="method-source-code" id="app_type-source">
+<pre>
+<span class="ruby-comment"># File lib/engineyard-api/app.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">app_type</span> 
+  <span class="ruby-ivar">@app</span>[<span class="ruby-string">'app_type_id'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- app_type-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- app_type-method -->
+
+      
+        <div id="name-method" class="method-detail ">
+          <a name="method-i-name"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">name</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return account name as string</p>
+            
+
+            
+            <div class="method-source-code" id="name-source">
+<pre>
+<span class="ruby-comment"># File lib/engineyard-api/app.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">name</span> 
+  <span class="ruby-ivar">@app</span>[<span class="ruby-string">'name'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- name-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- name-method -->
+
+      
+        <div id="repository-method" class="method-detail ">
+          <a name="method-i-repository"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">repository</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Return repository associated to application</p>
+            
+
+            
+            <div class="method-source-code" id="repository-source">
+<pre>
+<span class="ruby-comment"># File lib/engineyard-api/app.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">repository</span>
+  <span class="ruby-ivar">@app</span>[<span class="ruby-string">'repository_uri'</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- repository-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- repository-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

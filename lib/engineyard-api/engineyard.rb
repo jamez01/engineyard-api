@@ -1,13 +1,18 @@
+
 module EngineyardAPI
-  # Allow for Engineyard.new(account)
+  # Create new Engineyard object bassed off supplied options
+  # Example:
+  #  @ey = Engineyard.new(:key => "myapikey")
   def EngineyardAPI.new(*args)
-	#~ puts args
 	Engineyard.new(*args)
   end
   
+  # Main class returned by EngineyardAPI.new(:key => "key")
   class Engineyard
 	attr_accessor :accounts
-    def initialize(options)
+
+
+    def initialize(options)  #:nodoc
 	  @accounts = []
       raise ArgumentError, "API key not specified. #{self.class}.new(:key => '<api_key>')" unless options.has_key? :key
       @options=options
@@ -27,11 +32,31 @@ module EngineyardAPI
 		}
       return true
     end
+    
+    # Returns array of environments
+    def environments
+      return @accounts.map { |account| account.environments }.flatten
+    end 
+    
+    
+    # Find an environment based on name.  Returns EngineyardAPI::Environment 
+    def environment_by_name(name)
+      return environments.select {|e| e.name == name }.first
+    end
+
+    # Find an environment based on name.  Returns EngineyardAPI::Environment
+    def environment_by_id(id)
+      return environments.select {|e| e.environment_id == id }.first
+    end
+    
+    # Find an account based on name.  Returns EngineyardAPI::Account
     def account_by_id(id)
 	  ac = @accounts.select { |a| a.id == id }
 	  raise "No such account" unless ac.count == 1
 	  return ac[0]
     end
+
+    # Locate an account by name.  Returns EngineyardAPI::Account
     def account_by_name(name)
 	  ac = @accounts.select { |a| a.name == name }
 	  raise "No such account" unless ac.count == 1

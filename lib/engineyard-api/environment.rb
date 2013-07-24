@@ -2,71 +2,85 @@
 module EngineyardAPI
   # Environment class stores all environment data, and crawls over other parts of the api to grab data for Instance and App classes.
   class Environment
-    def initialize(id,environment = nil)
+    def initialize(id,environment = nil) # :nodoc:
 	  @environment = environment if environment
       @id = id
       @path = "/environments/#{id}"
       #EngineyardAPI::API = EngineyardAPI::API
       reload(environment)
     end
-
+    
+    # Returns integer containing environment ID
     def environment_id
       @environment['id']
     end
 
+    # Returns String containing th eenvironment name
     def name
       @environment['name']
     end
 
+    # Returns number of instances in environment
     def instance_count
       @environment['instances_count']
     end
 
+    # Returns array full of EngineyardAPI::Instnaces
     def instances
       @instances
     end
 
+    # Returns current status
     def instance_status
       @environment['instance_status']
     end
+    
+    # Return load balancer IP address, if any.
     def load_balancer_ip_address
       @environment['load_balancer_ip_address']
     end
 
-    def account
+    def account # :nodoc:
       @environment['account']
     end
 
+    # Name of current stack associated with environment
     def stack_name
       @environment['stack_name']
     end
 
+    # Default user used for deployments (usually 'deploy')
     def ssh_username
       @environment['ssh_username']
     end
-
+  
+    # Returns current stack name
     def app_server_stack_name
       @environment['app_server_stack_name']
     end
 
+    # Returns framework environment (i.e. "production", or "staging")
     def framework_env
       @environment['framework_env']
     end
 
+    # Returns array of EngineyardAPI::APP's 
     def apps
       @applications
     end
+
 
     def deployment_configurations
       @environment['deployment_configurations']
     end
 
+    # Return EngineyardAPI::Instance of current app_master
     def app_master
       @app_master
     end
 
     # This was mostly used for testing api. not used in script. keeping for future development reasons.
-    def keys(k=nil)
+    def keys(k=nil) # :nodoc:
       return  @environment.keys unless k
       return @environment[k]
     end
@@ -85,7 +99,7 @@ module EngineyardAPI
     # Remove instance. Provide role (:app, or :util), and :amazon_id if needed.
     def remove_instance(remove_instance)
       request = {:body => { :request => {:role => role } } } if [:app,:util].include? remove_instance
-      request = {:body => { :request => { :provisioned_id  => remove_instance.amazon_id } unless [:app,:util].include? remove_instance
+      request = {:body => { :request => { :provisioned_id  => remove_instance.amazon_id } }} unless [:app,:util].include? remove_instance
       EngineyardAPI::API.post("#{@path}/remove_instances",request)
     end
 
