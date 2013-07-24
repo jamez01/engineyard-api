@@ -23,7 +23,6 @@ module EngineyardAPI
       environment_list=@api.get("/environments")['environments']
       account_list.each {|a| @accounts << Account.new(a) }
 		environment_list.each {|e|
-		  puts e['account']['id']
 		  account_by_id(e['account']['id']).environments << Environment.new(e['id'],e)  
 		}
       return true

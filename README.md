@@ -1,4 +1,4 @@
-# Engineyard-API
+        # Engineyard-API
 
 * [rubyforge rdoc](http://tbd)
 * [rubyforge project](http://tbd)
@@ -22,3 +22,7 @@ gem install engineyard-api-<version>
 
 ## Usage & examples
 
+```
+require 'engineyard-api'
+
+@environment =  

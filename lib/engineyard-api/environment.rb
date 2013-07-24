@@ -72,9 +72,8 @@ module EngineyardAPI
     end
 
     # Create a new instance.  first param can take any arguments in hash that API would accept (i.e. :instance_size, :volume_size, etc)
-    def add_instance(body,zone=nil)
+    def add_instance(body)
       request = {:body => {:request => body}}
-      request[:body][:request][:availability_zone] = zone if zone
       EngineyardAPI::API.post("#{@path}/add_instances", request)
     end
 
@@ -84,11 +83,9 @@ module EngineyardAPI
     end
 
     # Remove instance. Provide role (:app, or :util), and :amazon_id if needed.
-    def remove_instance(role, remove_instance=nil, callback=nil)
-      ENV['INSTANCE'] = remove_instance.public_hostname if remove_instance
-      system(callback) if callback
-      request = {:body => { :request => {:role => role } } }
-      request[:body][:request][:provisioned_id] = remove_instance.amazon_id if remove_instance
+    def remove_instance(remove_instance)
+      request = {:body => { :request => {:role => role } } } if [:app,:util].include? remove_instance
+      request = {:body => { :request => { :provisioned_id  => remove_instance.amazon_id } unless [:app,:util].include? remove_instance
       EngineyardAPI::API.post("#{@path}/remove_instances",request)
     end
 
