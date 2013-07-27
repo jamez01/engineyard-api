@@ -1,7 +1,8 @@
 = Engineyard-API
+* {rdoc.info documentation}[http://rdoc.info/github/jamez01/engineyard-api/master/frames]
 * {rubyforge rdoc}[http://tbd]
 * {rubyforge project}[http://tbd]
-* {github project}[http://github.com/tbd]
+* {github project}[https://github.com/jamez01/engineyard-api]
 
 
 == Installation
@@ -9,8 +10,8 @@
 ... will usually be as simple as:
 
  gem install engineyard-api
-  
-Or, if you downloaded the archive:  
+
+Or, if you downloaded the archive:
 
  gem build engineyard-api
  gem install engineyard-api-<version>
@@ -19,13 +20,13 @@ Or, if you downloaded the archive:
 
 ==== Listing instances
  require 'engineyard-api'
- ey = Engineyard.new("API_KEY")
+ ey = EngineyardAPI.new(key: "API_KEY")
  environment = ey.environment_by_name("Production")
  environment.instances.each do |instance|
    puts instance.id
  end
 
-===== Multile Accounts
+===== Multiple Accounts
   require 'engineyard-api'
   ey = Engineyard.new("API_KEY")
   account1_environment = ey.account_by_name("Account1").environments.first
