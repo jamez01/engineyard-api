@@ -1,3 +1,9 @@
+= Obsolete
+This repository is nearly oboslete.  There is an **official** EY API client available here: https://github.com/engineyard/engineyard-cloud-client
+
+The official API client has some better methods for finding records, will be better supported, and should contain most of the functionality of this repository.
+
+
 = Engineyard-API
 * {rdoc.info documentation}[http://rdoc.info/github/jamez01/engineyard-api/master/frames]
 * {rubyforge rdoc}[http://tbd]
