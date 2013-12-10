@@ -21,7 +21,7 @@ Gem::Specification.new do |gem|
 
   # Include everything in the lib folder
   gem.files = Dir['./lib/**/*']
-  gem.files = %w(README.md) + Dir.glob("lib/**/*")
+  gem.files = %w(README.rdoc) + Dir.glob("lib/**/*")
 
   # Supress the warning about no rubyforge project
   #gem.rubyforge_project = 'nowarning'
